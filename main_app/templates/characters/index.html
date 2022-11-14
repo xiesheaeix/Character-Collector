@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>This is the characters page</h1>
+
+{% for character in characters %}
+<div>
+    <div>
+        <h3>{{character.name}}</h3>
+        <p>Description: {{character.description}}</p>
+        <p>Starred In: {{character.starredin}}</p>
+    </div>
+</div>
+{% endfor %}
+
+{% endblock %}
