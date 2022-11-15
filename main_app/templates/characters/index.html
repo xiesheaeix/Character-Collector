@@ -6,6 +6,7 @@
 
 
 {% for character in characters %}
+<a href="{%url 'detail' character.id %}">
     <div class="flip-card">
         <div class="flip-card-inner">
             <div class="flip-card-front">
@@ -18,6 +19,7 @@
             </div>
         </div>
     </div>
+</a>
 {% endfor %}
 
 {% endblock %}

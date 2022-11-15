@@ -3,6 +3,7 @@ html {
     min-height: 100vh;
     color: white;
     text-align: center;
+    font-family: 'Source Code Pro', monospace;
 }
 
 nav {
@@ -22,7 +23,6 @@ nav li, nav a{
     text-decoration: none;
 }
 
-
 .homepage {
     min-height: 100vh;
     background-image: url("main_app/collage.jpg");
@@ -30,6 +30,10 @@ nav li, nav a{
 }
 
 .about-page {
+    margin-top: 25vmin;
+}
+
+.detail-page {
     margin-top: 25vmin;
 }
 
