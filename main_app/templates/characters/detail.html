@@ -5,6 +5,12 @@
         <h3>{{character.name}}</h3>
         <p>Description: {{character.description}}</p>
         <p>Starred In: {{character.starred_in}}</p>
+
+
+        <div class="detail-page-btns">
+            <a href="{% url 'character_update' character.id %}">Edit</a>
+            <a href="{% url 'character_delete' character.id %}">Delete</a>
+        </div>
     </div>
 
 {% endblock %}

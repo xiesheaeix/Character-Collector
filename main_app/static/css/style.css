@@ -9,7 +9,7 @@ html {
 nav {
     overflow: hidden;
     background-color: #333;
-    position: fixed; /* Set the navbar to fixed position */
+    position: sticky; /* Set the navbar to fixed position */
     top: 0; /* Position the navbar at the top of the page */
     width: 100%; /* Full width */
 }
@@ -25,8 +25,28 @@ nav li, nav a{
 
 .homepage {
     min-height: 100vh;
-    background-image: url("main_app/collage.jpg");
+    background-image: url("/static/main_app/collage.jpg");
     background-size: cover;
+    position: relative;
+}
+
+.logo {
+    height: 25vmin;
+    width: 25vmin;
+}
+
+.overlay {
+    background-color: rgba(62, 225, 240, .8);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -50px 0 0 -50px;
+}
+
+.overlay li, .overlay a {
+    list-style: none;
+    text-align: center;
+    text-decoration: none;
 }
 
 .about-page {
@@ -35,6 +55,19 @@ nav li, nav a{
 
 .detail-page {
     margin-top: 25vmin;
+}
+
+.detail-page-btns a {
+    font: bold 20px;
+    text-decoration: none;
+    background-color: #EEEEEE;
+    border-radius: 10px;
+    color: #333333;
+    padding: 4px 8px 4px 8px;
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
 }
 
 .flip-card {

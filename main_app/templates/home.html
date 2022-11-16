@@ -1,8 +1,26 @@
-{% extends 'base.html' %}
-{% block content %}
-
-<div class="homepage">
-    <h1>Home</h1>
-</div>
-
-{% endblock %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Collector</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="homepage">
+        <div class="overlay">
+            <ul>
+                <li><a href="{% url 'home' %}"><img class="logo" src="{% static "main_app/logo.png" %}" alt="Home"></a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'index' %}">Characters</a></li>
+                <li><a href="{% url 'character_create' %}">Add a Character</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
