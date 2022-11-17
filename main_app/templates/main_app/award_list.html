@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Award List</h1>
+<a href="{% url 'awards_create' %}" class="btn">Add an Award</a>
+
+{% for award in award_list %}
+  <a href="{% url 'awards_detail' award.id %}">
+    <div class="card">
+        <div class="card-content">
+            <span class="card-title">{{ award.name }}</span>
+            <img src="{{ award.img_path }}" alt="award" style="height: 100px; width: 100px;">
+        </div>
+    </div>
+  </a>
+{% endfor %}
+
+{% endblock %}

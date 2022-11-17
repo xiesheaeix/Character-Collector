@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Award Detail</h1>
+<div class="row">
+    <div class="col s6 col-offset-3">
+      <div class="card">
+        <div class="card-content">
+          <span class="card-title" style="color: black;">{{ award.name }}</span>
+          <img src="{{ award.img_path }}" alt="award" style="height: 100px; width: 100px;">
+        </div>
+        <div class="card-action">
+            <a href="{% url 'awards_update' award.id %}">Edit</a>
+            <a href="{% url 'awards_delete' award.id %}">Delete</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

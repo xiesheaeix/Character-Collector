@@ -53,8 +53,8 @@ nav li, nav a{
 }
 
 .card {
-    color: black;
     padding-bottom: 10px;
+    color: black;
 }
 
 .detail-page-btns a {
@@ -103,14 +103,9 @@ nav li, nav a{
     backface-visibility: hidden;
 }
 
-/* Style the front side (fallback if image is missing) */
-.flip-card-front {
-    color: black;
-}
-
 /* Style the back side */
 .flip-card-back {
-    background-color: black;
+   
     color: white;
     transform: rotateY(180deg);
 }

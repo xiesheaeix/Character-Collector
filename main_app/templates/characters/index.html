@@ -2,18 +2,20 @@
 {% block content %}
 {% load static %}
 
-    <h1>This is the characters page</h1>
-
+<h1>All Your Favorite Characters<br>
+<a href="{% url 'character_create' %}" class="btn">Add a Character</a>
+</h1>
 
 {% for character in characters %}
 <a href="{%url 'detail' character.id %}">
     <div class="flip-card">
         <div class="flip-card-inner">
             <div class="flip-card-front">
-                <img src="{{ character.image_path }}" alt="character" style="width:200px;height:250px;">
-                <h6>{{character.name}}</h6>
+                <img src="{{ character.image_path }}" alt="character" style="width:180px;height:250px;">
+                <h5 style="color:white;">{{character.name}}</h5>
             </div>
             <div class="flip-card-back">
+                <h6>{{character.name}}</h6>
                 <p>Description: {{character.description}}</p>
                 <p>Starred In: {{character.starred_in}}</p>
             </div>
