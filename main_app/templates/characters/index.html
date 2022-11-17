@@ -10,8 +10,8 @@
     <div class="flip-card">
         <div class="flip-card-inner">
             <div class="flip-card-front">
-                <img src="{% static 'main_app/static/main_app/bugsbunny.png' %}" alt="character" style="width:300px;height:300px;">
-                <h3>{{character.name}}</h3>
+                <img src="{{ character.image_path }}" alt="character" style="width:200px;height:250px;">
+                <h6>{{character.name}}</h6>
             </div>
             <div class="flip-card-back">
                 <p>Description: {{character.description}}</p>
