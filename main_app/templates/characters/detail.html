@@ -12,6 +12,17 @@
                     <a href="{% url 'character_delete' character.id %}">Delete</a>
                 </div>
         </div>
+    {% for photo in character.photo_set.all %}
+      <img class="responsive-img card-panel" src="{{photo.url}}" style="color:black;">
+    {% empty %}
+      <div class="card-panel teal-text center-align">No Photos Uploaded</div>
+    {% endfor %}
+    <form action="{% url 'add_photo' character.id %}" enctype="multipart/form-data" method="POST" class="card-panel">
+      {% csrf_token %}
+      <input type="file" name="photo-file">
+      <br><br>
+      <button type="submit" class="btn">Upload Photo</button>
+  </form>
     </div>
     <div class="col s6">
         <form action="{% url 'add_token' character.id %}" method="POST" class="calender">
