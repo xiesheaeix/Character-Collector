@@ -32,7 +32,7 @@ class CharacterCreate(CreateView):
 
 class CharacterUpdate(UpdateView):
     model = Character
-    fields = '__all__'
+    fields = ['name', 'description', 'starred_in', 'image_path']
 
 class CharacterDelete(DeleteView):
     model = Character
